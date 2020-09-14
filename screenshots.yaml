@@ -6,4 +6,3 @@ devices:
     iPhone XS Max:
       frame: false
       orientation: Portrait
-archive: $FCI_EXPORT_DIR
