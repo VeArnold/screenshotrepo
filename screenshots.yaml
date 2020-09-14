@@ -6,4 +6,4 @@ devices:
     iPhone XS Max:
       frame: false
       orientation: Portrait
-archive: /Users/builder/exported_artefacts
+archive: $FCI_EXPORT_DIR
