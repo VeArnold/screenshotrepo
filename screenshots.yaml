@@ -1,6 +1,6 @@
 tests:
   - test_driver/app.dart
-staging: $FCI_BUILD_OUTPUT_DIR
+staging: /Users/builder/build_outputs
 devices:
   ios:
     iPhone XS Max:
