@@ -1,6 +1,6 @@
 import 'package:screenshotproj/main.dart' as app;
 import 'package:flutter_driver/driver_extension.dart';
-main() {
+void main() {
   enableFlutterDriverExtension();
   app.main();
 }
