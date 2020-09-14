@@ -1,9 +1,8 @@
 tests:
   - test_driver/app.dart
-staging: /Users/builder/build_outputs
+staging: $FCI_EXPORT_DIR
 devices:
   ios:
     iPhone XS Max:
       frame: false
       orientation: Portrait
-archive: $FCI_EXPORT_DIR
