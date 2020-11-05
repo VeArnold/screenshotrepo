@@ -1,0 +1,24 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    max_build_duration: 60
+    environment:
+      flutter: 1.21.0-1.0.pre
+      xcode: 12.0.1
+      cocoapods: default
+    scripts:
+      - flutter packages pub get
+      - name: Start Iphone 7
+        script: |
+          xcrun simctl shutdown all
+          TEST_DEVICE=$(xcrun simctl create test-device com.apple.CoreSimulator.SimDeviceType.iPhone-7 com.apple.CoreSimulator.SimRuntime.iOS-12-0)
+          xcrun simctl boot $TEST_DEVICE
+      - flutter drive -t test_driver/app.dart
+      - name: Start Ipad 2
+        script: |
+          xcrun simctl shutdown all
+          TEST_DEVICE=$(xcrun simctl create test-device com.apple.CoreSimulator.SimDeviceType.iPad-2 com.apple.CoreSimulator.SimRuntime.iOS-12-0)
+          xcrun simctl boot $TEST_DEVICE
+      - flutter drive -t test_driver/app.dart
+    artifacts:
+      - flutter_drive.log
