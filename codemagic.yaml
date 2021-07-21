@@ -5,6 +5,8 @@ workflows:
     environment:
       groups:
         - meow
+      vars:
+        RANDOM: 'boo'
     scripts:
       - echo $MAGIC
       - sleep 100
